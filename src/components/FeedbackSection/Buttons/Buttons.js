@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from './Buttons.styled';
 
-const Buttons = ({ onGoodIncrement, onNeutralIncrement, onBadIncrement }) => (
+const Buttons = ({ onHandleIncrement }) => (
   <>
-    <Button type="button" onClick={onGoodIncrement}>
+    <Button type="button" name="good" onClick={onHandleIncrement}>
       Good
     </Button>
-    <Button type="button" onClick={onNeutralIncrement}>
+    <Button type="button" name="neutral" onClick={onHandleIncrement}>
       Neutral
     </Button>
-    <Button type="button" onClick={onBadIncrement}>
+    <Button type="button" name="bad" onClick={onHandleIncrement}>
       Bad
     </Button>
   </>
@@ -19,7 +19,5 @@ const Buttons = ({ onGoodIncrement, onNeutralIncrement, onBadIncrement }) => (
 export default Buttons;
 
 Buttons.propTypes = {
-  onGoodIncrement: PropTypes.func.isRequired,
-  onNeutralIncrement: PropTypes.func.isRequired,
-  onBadIncrement: PropTypes.func.isRequired,
+  onHandleIncrement: PropTypes.func.isRequired,
 };
